@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crrt-revision"
+dynamic = ["version"]
+description = "Landmark causal analysis of prolonged CRRT."
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy==1.26.4", "pandas==2.2.2", "scipy==1.13.1", "scikit-learn==1.6.1",
+                "xgboost==3.2.0", "econml==0.16.0", "doubleml==0.10.1", "matplotlib==3.9.2", "PyYAML==6.0.1", "pyarrow==16.1.0", "joblib==1.4.2"]
+authors = [{name = "Prolonged CRRT study contributors"}]
+readme = "README.md"
+
+[project.optional-dependencies]
+postgres = ["SQLAlchemy>=2.0,<3", "psycopg2-binary>=2.9,<3"]
+test = ["pytest>=7.4,<9", "build>=1.2,<2"]
+
+[project.scripts]
+crrt-revision = "crrt_revision.cli:main"
+
+[tool.setuptools]
+license-files = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

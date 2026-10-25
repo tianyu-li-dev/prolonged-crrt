@@ -1,0 +1,11 @@
+features:
+  laboratories:
+  - potassium
+  - sodium
+  - chloride
+  - bicarbonate
+  - ph_blood
+  - creatinine
+  - bun
+  - pco2
+  - base_excess

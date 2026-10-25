@@ -1,0 +1,7 @@
+features:
+  laboratories:
+  - potassium
+  - ph_blood
+  - creatinine
+  - bun
+  - anion_gap

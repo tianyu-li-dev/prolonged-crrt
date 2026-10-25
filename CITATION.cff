@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: 'Cite the analysis code and the associated manuscript.'
+title: 'Landmark causal analysis of prolonged CRRT'
+type: software
+authors:
+  - family-names: Li
+    given-names: Tianyu
+  - family-names: Yang
+    given-names: Rongxin
+  - family-names: Shi
+    given-names: Tongyue
+  - family-names: Ma
+    given-names: Jun
+  - family-names: Zhao
+    given-names: Huiying
+  - family-names: Kong
+    given-names: Guilan

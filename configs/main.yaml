@@ -1,0 +1,29 @@
+data:
+  release: '2.1'
+  postgres_uri_env: MIMIC_POSTGRES_URI
+  source_directory: null
+design:
+  no_diuretic_thresholds: [400, 500, 600]
+  diuretic_thresholds: [1000, 2000]
+  primary_pair: [500, 2000]
+  landmark_hours: 24
+  merge_gap_hours: 6
+features:
+  laboratories: [potassium, sodium, chloride, bicarbonate, ph_blood, creatinine, bun]
+  chemistry_fallback: false
+  arterial_only: false
+  strict_storetime: false
+  window_hours: null
+  missing_indicators: false
+  keep_empty_features: false
+analysis:
+  families: [logistic, lasso, elastic_net, xgboost, rf]
+  outcomes: [mortality_28days, mortality_60days, mortality_90days]
+  folds: 5
+  seed: 42
+  trimming: [0.01, 0.99]
+  bootstrap_samples: 1000
+  bootstrap_jobs: 1
+  minimum_bootstrap_success: 0.95
+  cate_primary_only: true
+  allow_sparse_labs: true
